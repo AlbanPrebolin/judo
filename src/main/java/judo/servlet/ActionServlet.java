@@ -11,6 +11,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import judo.Traitement.ActionProvider;
+import judo.Traitement.InterfaceAction;
+
 /**
  * Servlet implementation class Action
  */
@@ -31,12 +34,20 @@ public class ActionServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		String action = request.getPathInfo().substring(1);
+		
+		
+		
 		ServletContext context = getServletContext();
 		RequestDispatcher dispatch = null;
 		
-		if (action.equals("Accueil")) {
-			dispatch = context.getRequestDispatcher("/WEB-INF/jsp/accueil.jsp");
-		}
+		InterfaceAction actionProvider = ActionProvider.getAction(action);
+		
+		String page = actionProvider.execute(request, response);
+		
+
+	
+		dispatch = context.getRequestDispatcher("/WEB-INF/jsp/"+page);
+		
 		
 		if (dispatch != null) {
 			dispatch.forward(request, response);
