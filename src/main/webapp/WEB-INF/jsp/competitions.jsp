@@ -4,9 +4,9 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Accueil</title>
+<title>Competition</title>
 </head>
 <body>
-	<p> Le Judo c'est trop bien</p>
+	<span>TOURNOIS DE JUDO POUR LES GROS BALEZES</span>
 </body>
 </html>

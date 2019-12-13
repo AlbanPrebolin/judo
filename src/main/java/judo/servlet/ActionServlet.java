@@ -44,9 +44,10 @@ public class ActionServlet extends HttpServlet {
 		
 		String page = actionProvider.execute(request, response);
 		
+		request.setAttribute("page", page);
 
 	
-		dispatch = context.getRequestDispatcher("/WEB-INF/jsp/"+page);
+		dispatch = context.getRequestDispatcher("/WEB-INF/jsp/templateJudo.jsp");
 		
 		
 		if (dispatch != null) {

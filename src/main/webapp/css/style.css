@@ -1,8 +1,14 @@
 @CHARSET "ISO-8859-1";
 
+.content{
+	display:inline-block;
+	vertical-align: top;
+	margin-right: 35px;
+}
 
-body{
-	background-color: red;
+nav{
+	border : solid 1px black;
+	padding-right: 15px;
 }
 
 td.header {

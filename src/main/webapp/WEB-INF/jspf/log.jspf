@@ -1,0 +1,7 @@
+
+<h3>Authentification</h3>
+<form action="Login" method="post">
+	<input required type="text" name="username" /> Login <input required
+		type="password" name="password" />Mdp <input type="submit"
+		value="Connexion" />
+</form>

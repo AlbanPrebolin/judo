@@ -12,12 +12,14 @@ public class ActionProvider {
 	static {
 		map.put("Accueil", Accueil.class);
 		map.put("Login", Login.class);
+		map.put("Logout", Logout.class);
+		map.put("Competitions", Competitions.class);
 	}
 	
 	public static final InterfaceAction   getAction(String action) {
 		Class<? extends InterfaceAction> clazz = map.get(action);
 		InterfaceAction traitement = null;
-		if(action == null || "*".equals(action)) {
+		if(action == null || "*".equals(action) ) {
 			clazz = map.get("Accueil");
 		}else {
 			clazz = map.get(action);

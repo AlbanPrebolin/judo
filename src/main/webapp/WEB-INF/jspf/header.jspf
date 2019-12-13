@@ -4,9 +4,9 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Accueil</title>
+<title>Club de judo</title>
 </head>
 <body>
-	<p> Le Judo c'est trop bien</p>
+	<h1>Bonjour, ${requestScope.login}</h1>
 </body>
 </html>
